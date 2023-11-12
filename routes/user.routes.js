@@ -5,6 +5,12 @@ const router = express.Router()
 
 router.post('/login',controler.login)
 router.post('/register',controler.register)
+router.post('/avaliable',controler.avaliable)
 router.post('/info',verifyToken,controler.info)
-router.post('/avaliable',verifyToken,controler.avaliable)
+router.post('/changepaw',verifyToken,controler.changepassword)
+//--------orther
+router.post('/forgetpassword',controler.forgetpassword)// 
+router.post('/changepassword',controler.changepassword_code)
+router.post('/resendcode',controler.resendcode)
+//--------------
 module.exports = router;

@@ -12,7 +12,6 @@ module.exports = function (server,router) {
             credentials: true
         }
     });
-
     // Lắng nghe kết nối từ các clients
     io.on('connection', async (socket) => {
         socket.join(socket.id)

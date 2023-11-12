@@ -8,12 +8,12 @@ const request = axios.create({
   }
 });
 
-// export const setAuth = ()=>{
-//   const token = JSON.parse(localStorage.getItem("user") || '{}')
-//   const refreshToken = token.accessToken
-//   request.defaults.headers.common['Authorization'] = `Bearer ${refreshToken}`
-// }
+export const setAuth = ()=>{
+  const token = JSON.parse(localStorage.getItem("user") || '{}')
+  const refreshToken = token.accessToken
+  request.defaults.headers.common['Authorization'] = `Bearer ${refreshToken}`
+}
 
-// setAuth()
+setAuth()
 
 module.exports = request

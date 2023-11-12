@@ -7,9 +7,8 @@ require('dotenv').config()
 // Import router từ file index.js
 const user = require('./routes/user.routes')
 const post = require('./routes/post.routes')
-const youtube = require('./routes/youtube.routes')
-const tiktok = require('./routes/tiktok.routes')
-const facebook = require('./routes/facebook.routes')
+const read = require('./routes/read.routes')
+const store = require('./routes/store.routes')
 // Sử dụng router với prefix /api
 const app = express();
 const server = http.createServer(app);
@@ -23,10 +22,8 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 app.use('/api/user', user);
-app.use('/api/post', post);
-app.use('/api/youtube', youtube);
-app.use('/api/tiktok', tiktok);
-app.use('/api/facebook', facebook);
+app.use('/api/user', user);
+app.use('/api/read', read);
 // Khi có một kết nối mới được thiết lập
 const PORT = 1234;
 

@@ -1,7 +1,8 @@
 const express = require('express')
-const tiktok = require('../controller/tiktok.controller')
+const controler = require('../controller/read.controller')
 const verifyToken = require('../midleware/auth')
 const router = express.Router()
 
-router.post('/download-video',tiktok.upload_link)
+router.post('/recognize',controler.recognize)
+//--------------
 module.exports = router;
